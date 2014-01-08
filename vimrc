@@ -12,7 +12,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'itchyny/lightline.vim'
-Bundle 'wombat256.vim'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on " required!
 
@@ -30,10 +30,29 @@ set ruler
 set mouse=a
 
 set t_Co=256
-colorscheme wombat256mod
+colorscheme solarized
 set laststatus=2
 set noshowmode
+set showcmd
 
 let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ }
+    \ 'colorscheme': 'solarized',
+    \}
+
+set ttimeoutlen=50
+
+" Searching
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" Wrapping
+set nowrap
+
+" Indentation
+
+" Python
+set expandtab
+set shiftwidth=4
+set softtabstop=4
