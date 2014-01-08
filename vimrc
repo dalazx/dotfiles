@@ -11,6 +11,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
+Bundle 'itchyny/lightline.vim'
+Bundle 'wombat256.vim'
 
 filetype plugin indent on " required!
 
@@ -26,3 +28,12 @@ set number
 set ruler
 
 set mouse=a
+
+set t_Co=256
+colorscheme wombat256mod
+set laststatus=2
+set noshowmode
+
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ }
