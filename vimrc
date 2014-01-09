@@ -68,3 +68,5 @@ set showbreak=↪
 set hidden
 
 map <F2> :NERDTreeToggle<CR>
+
+set autoread

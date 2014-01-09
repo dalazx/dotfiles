@@ -13,3 +13,6 @@ wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols
 
 wget https://raw.github.com/phiggins/konsole-colors-solarized/master/Solarized%20Dark.colorscheme -P ~/.kde4/share/apps/konsole/
 wget https://raw.github.com/phiggins/konsole-colors-solarized/master/Solarized%20Light.colorscheme -P ~/.kde4/share/apps/konsole/
+
+
+pip install pyprof2calltree
