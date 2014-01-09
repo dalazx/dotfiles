@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'itchyny/lightline.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'klen/python-mode'
 
 filetype plugin indent on " required!
 
@@ -24,6 +25,7 @@ syntax on
 set backspace=indent,eol,start
 
 set cursorline
+set colorcolumn=+1
 set number
 set ruler
 
@@ -56,3 +58,13 @@ set nowrap
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+
+
+" Whitespaces
+set list
+set listchars=eol:¬,tab:▸\ ,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
+
+set hidden
+
+map <F2> :NERDTreeToggle<CR>
