@@ -11,10 +11,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
 Bundle 'itchyny/lightline.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'klen/python-mode'
-Bundle 'dbext.vim'
+" Bundle 'dbext.vim'
 
 filetype plugin indent on " required!
 
@@ -40,7 +41,21 @@ set showcmd
 
 let g:lightline = {
     \ 'colorscheme': 'solarized',
-    \}
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component': {
+    \   'readonly': '%{&filetype=="help"?"":&readonly?"x":""}',
+    \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+    \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+    \ },
+    \ 'component_visible_condition': {
+    \   'readonly': '(&filetype!="help"&& &readonly)',
+    \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+    \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+    \ }
+    \ }
 
 set ttimeoutlen=50
 
