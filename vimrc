@@ -84,5 +84,8 @@ set showbreak=↪
 set hidden
 
 map <F2> :NERDTreeToggle<CR>
+map Y y$
 
 set autoread
+
+let NERDTreeIgnore=['\.py[co]$']

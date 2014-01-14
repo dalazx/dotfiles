@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ln -s ~/Dropbox/.ssh ~/.ssh
+
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 
