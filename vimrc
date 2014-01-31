@@ -11,6 +11,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'itchyny/lightline.vim'
 Bundle 'altercation/vim-colors-solarized'
