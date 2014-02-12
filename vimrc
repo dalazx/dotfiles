@@ -16,7 +16,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'itchyny/lightline.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'klen/python-mode'
-" Bundle 'dbext.vim'
+Bundle 'dbext.vim'
 
 filetype plugin indent on " required!
 
