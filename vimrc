@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
 Bundle 'itchyny/lightline.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'klen/python-mode'
@@ -57,6 +58,9 @@ let g:lightline = {
     \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
     \ }
     \ }
+
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
 
 set ttimeoutlen=50
 
