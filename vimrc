@@ -90,6 +90,7 @@ set hidden
 
 map <F2> :NERDTreeToggle<CR>
 map Y y$
+inoremap <C-L> <Del>
 
 set autoread
 
