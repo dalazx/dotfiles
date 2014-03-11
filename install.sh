@@ -2,6 +2,9 @@
 
 ln -s ~/Dropbox/.ssh ~/.ssh
 
+ln -s ~/.dotfiles/bashrc ~/.bashrc
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 
@@ -19,4 +22,4 @@ wget https://raw.github.com/phiggins/konsole-colors-solarized/master/Solarized%2
 
 pip install pyprof2calltree
 
-isudo apt-get install vim-gtk
+sudo apt-get install vim-gtk
