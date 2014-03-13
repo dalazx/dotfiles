@@ -29,6 +29,7 @@ Bundle 'klen/python-mode'
 " Bundle 'vim-scripts/jpythonfold.vim'
 
 Bundle 'davidhalter/jedi-vim'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on " required!
 
@@ -40,8 +41,8 @@ syntax on
 set backspace=indent,eol,start
 
 set cursorline
-" set colorcolumn=+1
-let &colorcolumn=join(range(&textwidth+1,256), ",")
+set colorcolumn=+1
+" let &colorcolumn=join(range(&textwidth+1,256), ",")
 set number
 set ruler
 
@@ -81,6 +82,9 @@ let g:pymode_doc = 0
 let g:pymode_rope = 0
 let g:pymode_motion = 0
 let g:pymode_virtualenv = 0
+
+" syntastic
+let g:syntastic_python_checkers = ['pylama']
 
 set ttimeoutlen=50
 
