@@ -12,12 +12,23 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+
 Bundle 'itchyny/lightline.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'klen/python-mode'
+
 Bundle 'dbext.vim'
+
+" python
+" Bundle 'klen/python-mode'
+Bundle 'hdima/python-syntax'
+
+" Bundle 'tmhedberg/SimpylFold'
+" Bundle 'vim-scripts/jpythonfold.vim'
+
+Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on " required!
 
