@@ -22,8 +22,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'dbext.vim'
 
 " python
-" Bundle 'klen/python-mode'
-Bundle 'hdima/python-syntax'
+Bundle 'klen/python-mode'
+" Bundle 'hdima/python-syntax'
 
 " Bundle 'tmhedberg/SimpylFold'
 " Bundle 'vim-scripts/jpythonfold.vim'
@@ -40,7 +40,8 @@ syntax on
 set backspace=indent,eol,start
 
 set cursorline
-set colorcolumn=+1
+" set colorcolumn=+1
+let &colorcolumn=join(range(&textwidth+1,256), ",")
 set number
 set ruler
 
@@ -53,6 +54,7 @@ set laststatus=2
 set noshowmode
 set showcmd
 
+" lightline
 let g:lightline = {
     \ 'colorscheme': 'solarized',
     \ 'active': {
@@ -71,8 +73,14 @@ let g:lightline = {
     \ }
     \ }
 
+" pymode
+let g:pymode_run = 0
+let g:pymode_breakpoint = 0
+let g:pymode_lint = 0
+let g:pymode_doc = 0
 let g:pymode_rope = 0
-let g:pymode_rope_completion = 0
+let g:pymode_motion = 0
+let g:pymode_virtualenv = 0
 
 set ttimeoutlen=50
 
