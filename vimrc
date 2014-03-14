@@ -29,8 +29,9 @@ Bundle 'klen/python-mode'
 " Bundle 'tmhedberg/SimpylFold'
 " Bundle 'vim-scripts/jpythonfold.vim'
 
-Bundle 'davidhalter/jedi-vim'
+" Bundle 'davidhalter/jedi-vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on " required!
 

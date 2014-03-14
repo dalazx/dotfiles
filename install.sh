@@ -24,3 +24,5 @@ wget https://raw.github.com/phiggins/konsole-colors-solarized/master/Solarized%2
 pip install pyprof2calltree
 
 sudo apt-get install vim-gtk
+
+sudo pip install pylama
