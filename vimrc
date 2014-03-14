@@ -17,7 +17,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 
 Bundle 'itchyny/lightline.vim'
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'nanotech/jellybeans.vim'
 
 Bundle 'dbext.vim'
 
@@ -50,14 +51,14 @@ set mouse=a
 
 " set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 set laststatus=2
 set noshowmode
 set showcmd
 
 " lightline
 let g:lightline = {
-    \ 'colorscheme': 'solarized',
+    \ 'colorscheme': 'jellybeans',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
@@ -73,6 +74,10 @@ let g:lightline = {
     \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
     \ }
     \ }
+" tmuxline
+let g:tmuxline_powerline_separators = 0
+let g:tmuxline_theme = 'jellybeans'
+let g:tmuxline_preset = 'full'
 
 " pymode
 let g:pymode_run = 0
