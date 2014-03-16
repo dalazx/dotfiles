@@ -15,6 +15,7 @@ Bundle 'kien/ctrlp.vim'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-easymotion'
 
 Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
@@ -24,8 +25,8 @@ Bundle 'dbext.vim'
 
 " python
 Bundle 'klen/python-mode'
-" Bundle 'hdima/python-syntax'
 
+" Bundle 'hdima/python-syntax'
 " Bundle 'tmhedberg/SimpylFold'
 " Bundle 'vim-scripts/jpythonfold.vim'
 
