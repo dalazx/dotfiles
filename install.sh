@@ -38,5 +38,8 @@ sudo pip install pylama
 
 sudo apt-get install virtualbox
 # vagrant
+sudo apt-get install libmysqlclient-dev
 
 mkdir ~/dev
+
+sudo apt-get install -y s3cmd
