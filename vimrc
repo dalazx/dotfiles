@@ -1,4 +1,5 @@
 set nocompatible
+let mapleader = ' '
 
 set encoding=utf-8
 
@@ -122,6 +123,7 @@ set hidden
 map <F2> :NERDTreeToggle<CR>
 map Y y$
 inoremap <C-L> <Del>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 set autoread
 

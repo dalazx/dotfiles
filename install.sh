@@ -43,3 +43,5 @@ sudo apt-get install libmysqlclient-dev
 mkdir ~/dev
 
 sudo apt-get install -y s3cmd
+sudo apt-get install -y htop
+sudo apt-get install -y meld
