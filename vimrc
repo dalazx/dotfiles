@@ -34,6 +34,7 @@ Bundle 'klen/python-mode'
 " Bundle 'davidhalter/jedi-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
+Plugin 'sjl/gundo.vim'
 
 filetype plugin indent on " required!
 
