@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+" Plugin 'vim-scripts/ZoomWin'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
@@ -31,10 +32,22 @@ Bundle 'klen/python-mode'
 " Bundle 'tmhedberg/SimpylFold'
 " Bundle 'vim-scripts/jpythonfold.vim'
 
+" jinja 2
+" Plugin 'mitsuhiko/vim-jinja'
+" Plugin 'Glench/Vim-Jinja2-Syntax'
+
 " Bundle 'davidhalter/jedi-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'sjl/gundo.vim'
+
+Plugin 'othree/html5.vim'
+Plugin 'hail2u/vim-css3-syntax'
+" Plugin 'pangloss/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 filetype plugin indent on " required!
 
@@ -59,6 +72,12 @@ colorscheme jellybeans
 set laststatus=2
 set noshowmode
 set showcmd
+
+" vim-indent-guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+" hi IndentGuidesOdd ctermbg=151515
+" hi IndentGuidesOdd ctermbg=1c1c1c
 
 " lightline
 let g:lightline = {
@@ -85,7 +104,7 @@ let g:tmuxline_preset = 'full'
 
 " pymode
 let g:pymode_run = 0
-let g:pymode_breakpoint = 0
+let g:pymode_breakpoint = 1
 let g:pymode_lint = 0
 let g:pymode_doc = 0
 let g:pymode_rope = 0
@@ -94,6 +113,9 @@ let g:pymode_virtualenv = 1
 
 " syntastic
 let g:syntastic_python_checkers = ['pylama']
+
+" vim-javascript-syntax
+au FileType javascript call JavaScriptFold()
 
 set ttimeoutlen=50
 
