@@ -23,6 +23,8 @@ ln -s ~/.dotfiles/tmux ~/.tmux
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 
+ln -s ~/.dotfiles/irssi ~/.irssi
+
 git clone https://github.com/gmarik/vundle.git vim/bundle/vundle
 
 sudo apt-get install python-setuptools

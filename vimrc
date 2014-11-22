@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 " Plugin 'vim-scripts/ZoomWin'
 
 Bundle 'tpope/vim-fugitive'
@@ -87,6 +88,7 @@ let g:lightline = {
     \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
     \ },
     \ 'component': {
+    \   'filename': '%{expand("%") != "" ? expand("%") : "[No Name]"}',
     \   'readonly': '%{&filetype=="help"?"":&readonly?"x":""}',
     \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
     \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
@@ -144,6 +146,7 @@ set showbreak=↪
 set hidden
 
 map <F2> :NERDTreeToggle<CR>
+map <F3> :TagbarToggle<CR>
 map Y y$
 inoremap <C-L> <Del>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
