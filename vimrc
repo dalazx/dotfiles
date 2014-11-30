@@ -11,6 +11,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
+Plugin 'Shougo/unite.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
@@ -19,6 +20,7 @@ Plugin 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
+Plugin 'terryma/vim-multiple-cursors'
 
 Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
