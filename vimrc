@@ -11,16 +11,21 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
+Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
+Plugin 'Shougo/neomru.vim'
+Plugin 'Shougo/vimfiler.vim'
+" Bundle 'scrooloose/nerdtree'
+" Bundle 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 " Plugin 'vim-scripts/ZoomWin'
 
 Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-expand-region'
 
 Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
@@ -30,6 +35,7 @@ Bundle 'dbext.vim'
 
 " python
 Bundle 'klen/python-mode'
+" Bundle 'alfredodeza/coveragepy.vim'
 
 " Bundle 'hdima/python-syntax'
 " Bundle 'tmhedberg/SimpylFold'
@@ -121,7 +127,9 @@ let g:syntastic_python_checkers = ['pylama']
 " vim-javascript-syntax
 au FileType javascript call JavaScriptFold()
 
-set ttimeoutlen=50
+set notimeout
+set ttimeout
+set ttimeoutlen=10
 
 " Searching
 set ignorecase
@@ -147,11 +155,19 @@ set showbreak=↪
 
 set hidden
 
-map <F2> :NERDTreeToggle<CR>
+" map <F2> :NERDTreeToggle<CR>
+map <F2> :VimFilerExplorer<CR>
 map <F3> :TagbarToggle<CR>
 map Y y$
 inoremap <C-L> <Del>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+map OM <CR>
+map! OM <CR>
+
+" Unite
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>f :<C-u>Unite -buffer-name=files
+    \ buffer file_mru file_rec/async<CR>
 
 set autoread
 
