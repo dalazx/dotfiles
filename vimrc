@@ -31,7 +31,7 @@ Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'nanotech/jellybeans.vim'
 
-Bundle 'dbext.vim'
+" Bundle 'dbext.vim'
 
 " python
 Bundle 'klen/python-mode'
@@ -126,6 +126,9 @@ let g:syntastic_python_checkers = ['pylama']
 
 " vim-javascript-syntax
 au FileType javascript call JavaScriptFold()
+
+" tagbar
+let g:tagbar_autofocus = 1
 
 set notimeout
 set ttimeout
