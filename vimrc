@@ -81,6 +81,7 @@ colorscheme jellybeans
 set laststatus=2
 set noshowmode
 set showcmd
+set wildmenu
 
 " vim-indent-guides
 let g:indent_guides_start_level = 2
@@ -169,8 +170,17 @@ map! OM <CR>
 
 " Unite
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>f :<C-u>Unite -buffer-name=files
-    \ buffer file_mru file_rec/async<CR>
+nnoremap <leader>b :<C-u>Unite -buffer-name=buffers buffer<CR>
+nnoremap <leader>r :<C-u>Unite -buffer-name=registers register<CR>
+nnoremap <leader>f :<C-u>Unite -buffer-name=files file_rec/async<CR>
+nnoremap <leader>m :<C-u>Unite -buffer-name=mru file_mru<CR>
+nnoremap <leader>g :<C-u>Unite -buffer-name=grep grep:.<CR>
+if executable('pt')
+  let g:unite_source_grep_command = 'pt'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+  let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_grep_encoding = 'utf-8'
+endif
 
 set autoread
 
