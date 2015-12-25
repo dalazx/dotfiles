@@ -26,12 +26,11 @@ Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'terryma/vim-expand-region'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'nanotech/jellybeans.vim'
-
-" Bundle 'dbext.vim'
 
 " python
 Bundle 'klen/python-mode'
@@ -54,9 +53,8 @@ Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
 " Plugin 'pangloss/vim-javascript'
 Bundle 'jelera/vim-javascript-syntax'
-Plugin 'marijnh/tern_for_vim'
+" Plugin 'marijnh/tern_for_vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'nathanaelkane/vim-indent-guides'
 
 filetype plugin indent on " required!
 
@@ -175,12 +173,17 @@ nnoremap <leader>r :<C-u>Unite -buffer-name=registers register<CR>
 nnoremap <leader>f :<C-u>Unite -buffer-name=files file_rec/async<CR>
 nnoremap <leader>m :<C-u>Unite -buffer-name=mru file_mru<CR>
 nnoremap <leader>g :<C-u>Unite -buffer-name=grep grep:.<CR>
+nnoremap <leader>uc :<C-u>UniteResume<CR>
 if executable('pt')
   let g:unite_source_grep_command = 'pt'
   let g:unite_source_grep_default_opts = '--nogroup --nocolor'
   let g:unite_source_grep_recursive_opt = ''
   let g:unite_source_grep_encoding = 'utf-8'
 endif
+
+" python-mode
+let g:pymode_breakpoint_bind = '<leader>pb'
+let g:pymode_run_bind = '<leader>pr'
 
 set autoread
 
