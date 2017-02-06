@@ -86,6 +86,9 @@ set noshowmode
 set showcmd
 set wildmenu
 
+set wildignore+=.git,.github
+set wildignore+=*.pyc,__pycache__
+
 " vim-indent-guides
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
@@ -123,7 +126,10 @@ let g:pymode_lint = 0
 let g:pymode_doc = 0
 let g:pymode_rope = 0
 let g:pymode_motion = 0
+let g:pymode_folding = 0
 let g:pymode_virtualenv = 1
+let g:pymode_breakpoint_bind = '<leader>pb'
+let g:pymode_run_bind = '<leader>pr'
 
 " syntastic
 let g:syntastic_python_checkers = ['pylama']
