@@ -132,7 +132,12 @@ let g:pymode_breakpoint_bind = '<leader>pb'
 let g:pymode_run_bind = '<leader>pr'
 
 " syntastic
-let g:syntastic_python_checkers = ['pylama']
+" flake8 includes pyflakes, pycodestyle and mccabe
+" python3 -m pip install --user flake8 pydocstyle mypy-lang pylint
+let g:syntastic_python_checkers = [
+    \ 'flake8', 'pydocstyle', 'python', 'mypy', 'pylint']
+
+let g:syntastic_shell_checkers = ['shellcheck', 'sh']
 
 " vim-javascript-syntax
 au FileType javascript call JavaScriptFold()
@@ -143,6 +148,8 @@ let g:tagbar_autofocus = 1
 set notimeout
 set ttimeout
 set ttimeoutlen=10
+
+set updatetime=250
 
 " Searching
 set ignorecase
