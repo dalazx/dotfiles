@@ -184,10 +184,6 @@ if executable('pt')
     \ ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 endif
 
-" python-mode
-let g:pymode_breakpoint_bind = '<leader>pb'
-let g:pymode_run_bind = '<leader>pr'
-
 set autoread
 
 let NERDTreeIgnore=['\.py[co]$']
