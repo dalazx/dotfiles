@@ -187,3 +187,37 @@ endif
 set autoread
 
 let NERDTreeIgnore=['\.py[co]$']
+let g:vimfiler_ignore_filters = ['matcher_ignore_wildignore']
+
+" copy the current filename to the system clipboard
+nnoremap <leader>yf :<C-u>let @* = expand('%')<CR>
+
+" tags
+function s:remove_tags()
+    echom system('rm cscope.files cscope.out tags')
+    echom 'Removed tags'
+endfunction
+
+function s:build_tags()
+    echom system('find . -name \*.py > cscope.files')
+    echom system('ctags -R -L cscope.files')
+    echom system('cscope -Rb -i cscope.files')
+    echom 'Finished building tags'
+endfunction
+
+function s:rebuild_tags()
+    call s:remove_tags()
+    call s:build_tags()
+endfunction
+
+command! BuildTags call s:build_tags()
+command! RebuildTags call s:rebuild_tags()
+
+if has("cscope")
+  set cscopetag
+  if filereadable("cscope.out")
+      cscope add cscope.out
+  elseif $CSCOPE_DB != ""
+      cscope add $CSCOPE_DB
+  endif
+endif
