@@ -23,8 +23,10 @@ Plugin 'Shougo/vimfiler.vim'
 Plugin 'majutsushi/tagbar'
 " Plugin 'vim-scripts/ZoomWin'
 
+" git
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
@@ -37,6 +39,7 @@ Bundle 'nanotech/jellybeans.vim'
 
 " python
 Bundle 'klen/python-mode'
+" set rtp+=~/.vim/bundle/python-folding/
 " Bundle 'alfredodeza/coveragepy.vim'
 
 " Bundle 'hdima/python-syntax'
@@ -51,15 +54,14 @@ Bundle 'klen/python-mode'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'sjl/gundo.vim'
-
-Plugin 'othree/html5.vim'
-Plugin 'hail2u/vim-css3-syntax'
-" Plugin 'pangloss/vim-javascript'
-Bundle 'jelera/vim-javascript-syntax'
-" Plugin 'marijnh/tern_for_vim'
-Plugin 'mattn/emmet-vim'
+Plugin 'Chiel92/vim-autoformat'
 
 filetype plugin indent on " required!
+
+" preliminarily running sensible.vim to be able to override later
+runtime! plugin/sensible.vim
+
+set path+=**
 
 set nomodeline
 set noswapfile
