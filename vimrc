@@ -1,5 +1,6 @@
 set nocompatible
 let mapleader = ' '
+let maplocalleader = ' '
 
 set encoding=utf-8
 
