@@ -25,6 +25,7 @@ Plugin 'majutsushi/tagbar'
 
 " git
 Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 Bundle 'airblade/vim-gitgutter'
 
 Bundle 'tpope/vim-surround'
