@@ -62,6 +62,9 @@ filetype plugin indent on " required!
 " preliminarily running sensible.vim to be able to override later
 runtime! plugin/sensible.vim
 
+set ttyfast
+set lazyredraw
+
 set path+=**
 
 set nomodeline
