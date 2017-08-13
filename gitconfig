@@ -3,6 +3,8 @@
 	email = dalazx@gmail.com
 [color]
 	ui = true
+	diff = always
+	status = always
 [push]
 	default = simple
 
