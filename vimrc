@@ -92,6 +92,7 @@ set wildmenu
 
 set wildignore+=.git,.github
 set wildignore+=*.pyc,__pycache__
+set wildignore+=cscope.files,cscope.out,tags
 
 " vim-indent-guides
 let g:indent_guides_start_level = 2
@@ -221,6 +222,7 @@ endfunction
 
 function s:build_tags()
     echom system('find . -name \*.py > cscope.files')
+    echom system('find . -name \*.sh >> cscope.files')
     echom system('ctags -R -L cscope.files')
     echom system('cscope -Rb -i cscope.files')
     echom 'Finished building tags'
