@@ -206,6 +206,10 @@ if executable('pt')
     \ ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 endif
 
+call unite#custom#source(
+    \ 'file_mru', 'matchers',
+    \ ['matcher_project_files', 'matcher_fuzzy'])
+
 set autoread
 
 let NERDTreeIgnore=['\.py[co]$']
