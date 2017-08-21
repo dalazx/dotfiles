@@ -137,6 +137,9 @@ let g:tmuxline_preset = 'full'
 " let g:pymode_run_bind = '<leader>pr'
 
 " syntastic
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
 " flake8 includes pyflakes, pycodestyle and mccabe
 " python3 -m pip install --user flake8 pydocstyle mypy-lang pylint
 let g:syntastic_python_checkers = [
@@ -179,6 +182,8 @@ set listchars=eol:¬,tab:▸\ ,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
 set hidden
+
+set dictionary=/usr/share/dict/words
 
 " map <F2> :NERDTreeToggle<CR>
 map <F2> :VimFilerExplorer<CR>
