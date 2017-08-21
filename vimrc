@@ -39,7 +39,7 @@ Bundle 'edkolev/tmuxline.vim'
 Bundle 'nanotech/jellybeans.vim'
 
 " python
-Bundle 'klen/python-mode'
+" Bundle 'klen/python-mode'
 " set rtp+=~/.vim/bundle/python-folding/
 " Bundle 'alfredodeza/coveragepy.vim'
 
@@ -125,16 +125,16 @@ let g:tmuxline_theme = 'jellybeans'
 let g:tmuxline_preset = 'full'
 
 " pymode
-let g:pymode_run = 0
-let g:pymode_breakpoint = 1
-let g:pymode_lint = 0
-let g:pymode_doc = 0
-let g:pymode_rope = 0
-let g:pymode_motion = 0
-let g:pymode_folding = 0
-let g:pymode_virtualenv = 1
-let g:pymode_breakpoint_bind = '<leader>pb'
-let g:pymode_run_bind = '<leader>pr'
+" let g:pymode_run = 0
+" let g:pymode_breakpoint = 1
+" let g:pymode_lint = 0
+" let g:pymode_doc = 0
+" let g:pymode_rope = 0
+" let g:pymode_motion = 0
+" let g:pymode_folding = 0
+" let g:pymode_virtualenv = 1
+" let g:pymode_breakpoint_bind = '<leader>pb'
+" let g:pymode_run_bind = '<leader>pr'
 
 " syntastic
 " flake8 includes pyflakes, pycodestyle and mccabe
