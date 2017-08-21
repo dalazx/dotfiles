@@ -74,7 +74,7 @@ syntax on
 
 set backspace=indent,eol,start
 
-set cursorline
+set nocursorline
 set colorcolumn=+1
 " let &colorcolumn=join(range(&textwidth+1,256), ",")
 set number
