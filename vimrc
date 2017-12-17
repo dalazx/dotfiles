@@ -234,6 +234,9 @@ endfunction
 function s:build_tags()
     echom system('find . -name \*.py > cscope.files')
     echom system('find . -name \*.sh >> cscope.files')
+    " see https://leonard.io/blog/2013/04/editing-scala-with-vim/
+    echom system('find . -name \*.scala >> cscope.files')
+    echom system('find . -name \*.java >> cscope.files')
     echom system('ctags -R -L cscope.files')
     echom system('cscope -Rb -i cscope.files')
     cscope reset
