@@ -107,7 +107,7 @@ let g:lightline = {
     \ 'colorscheme': 'jellybeans',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+    \             [ 'readonly', 'filename', 'modified' ] ]
     \ },
     \ 'component': {
     \   'filename': '%{expand("%") != "" ? expand("%") : "[No Name]"}',
