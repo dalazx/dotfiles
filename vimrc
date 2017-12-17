@@ -236,6 +236,7 @@ function s:build_tags()
     echom system('find . -name \*.sh >> cscope.files')
     echom system('ctags -R -L cscope.files')
     echom system('cscope -Rb -i cscope.files')
+    cscope reset
     echom 'Finished building tags'
 endfunction
 
