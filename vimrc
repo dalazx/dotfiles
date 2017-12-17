@@ -33,6 +33,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'terryma/vim-expand-region'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'kshenoy/vim-signature'
 
 Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
