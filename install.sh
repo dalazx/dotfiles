@@ -25,6 +25,8 @@ ln -s ~/.dotfiles/vimrc ~/.vimrc
 
 ln -s ~/.dotfiles/irssi ~/.irssi
 
+ln -s ~/.dotfiles/Brewfile ~/Brewfile
+
 git clone https://github.com/gmarik/vundle.git vim/bundle/vundle
 
 sudo apt-get install python-setuptools
