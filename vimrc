@@ -14,6 +14,9 @@ Bundle 'gmarik/vundle'
 
 Plugin 'tpope/vim-sensible'
 
+Plugin 'tpope/vim-unimpaired'
+" Plugin 'tpope/vim-repeat'
+
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/neomru.vim'
