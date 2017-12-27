@@ -32,6 +32,7 @@ brew "gettext"
 brew "git"
 brew "libffi"
 brew "glib"
+brew "global", args: ["with-pygments", "with-universal-ctags"]
 brew "gmp"
 brew "gnu-getopt"
 brew "libtasn1"
