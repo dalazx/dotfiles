@@ -26,6 +26,7 @@ ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/irssi ~/.irssi
 
 ln -s ~/.dotfiles/Brewfile ~/Brewfile
+ln -s ~/.dotfiles/globalrc ~/.globalrc
 
 git clone https://github.com/gmarik/vundle.git vim/bundle/vundle
 
