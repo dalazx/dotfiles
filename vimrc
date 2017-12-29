@@ -262,3 +262,20 @@ if has("cscope")
       cscope add $CSCOPE_DB
   endif
 endif
+
+if executable("gtags-cscope")
+    " https://www.gnu.org/software/global/globaldoc_toc.html#Gtags_002dcscope
+    set cscopeprg=gtags-cscope
+    " cscope add is only needed here to establish a connection.
+    " vim checks whether the file exists and passes it as follows:
+    " gtags-cscope -dl -f GTAGS
+    " but the -f argument is completely ignored in gtags-cscope!
+    cscope add GTAGS
+elseif executable("cscope")
+  if filereadable("cscope.out")
+      " TODO: actually this might be reused for gtags provided the file exists
+      cscope add cscope.out
+  elseif $CSCOPE_DB != ""
+      cscope add $CSCOPE_DB
+  endif
+endif
