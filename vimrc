@@ -57,8 +57,8 @@ Bundle 'nanotech/jellybeans.vim'
 
 " Bundle 'davidhalter/jedi-vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'sjl/gundo.vim'
+" Bundle 'Valloric/YouCompleteMe'
+" Plugin 'sjl/gundo.vim'
 Plugin 'Chiel92/vim-autoformat'
 
 filetype plugin indent on " required!
