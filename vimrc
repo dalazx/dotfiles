@@ -188,6 +188,7 @@ set showbreak=↪
 
 set hidden
 
+set spell spelllang=en_us
 set dictionary=/usr/share/dict/words
 
 " map <F2> :NERDTreeToggle<CR>
