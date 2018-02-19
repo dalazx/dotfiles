@@ -200,6 +200,8 @@ nnoremap <leader>jd :YcmCompleter GoTo<CR>
 map OM <CR>
 map! OM <CR>
 
+cabbr <expr> %% expand("%:h")
+
 " Unite
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>b :<C-u>Unite -buffer-name=buffers buffer<CR>
