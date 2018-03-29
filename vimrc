@@ -239,6 +239,7 @@ endfunction
 
 function s:build_tags()
     echom system('find . -name \*.py > cscope.files')
+    echom system('find /usr/local/Cellar/python3 -name \*.py >> cscope.files')
     echom system('find . -name \*.sh >> cscope.files')
     " see https://leonard.io/blog/2013/04/editing-scala-with-vim/
     echom system('find . -name \*.scala >> cscope.files')
