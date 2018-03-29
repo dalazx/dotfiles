@@ -12,7 +12,8 @@ sudo apt-get install subversion
 sudo apt-get install build-essential cmake python-dev
 sudo apt-get install pkg-config
 
-ln -s ~/Dropbox/.ssh ~/.ssh
+# ln -s ~/Dropbox/.ssh ~/.ssh
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Misc/ssh ~/.ssh
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 
 mv ~/.bashrc ~/.bashrc_backup
