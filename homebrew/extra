@@ -1,0 +1,4 @@
+brew "ansible"
+brew "awscli"
+brew "terraform"
+brew "terraform-inventory"
