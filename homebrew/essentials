@@ -1,0 +1,71 @@
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "caskroom/versions"
+tap "caskroom/cask"
+
+# shells
+# brew "bash"
+brew "zsh"
+
+# VCS
+brew "git"
+brew "git-lfs"
+# brew "hub"
+
+# C
+brew "gcc"
+# brew "gdb", args: ["with-python"]
+# brew "cgdb"
+# brew "cmake"
+
+# brew "irssi"
+
+tap "universal-ctags/universal-ctags"
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+brew "cscope"
+# brew "global", args: ["with-pygments", "with-universal-ctags"]
+
+brew "python"
+brew "cloc"
+brew "fpp"
+brew "gettext"
+brew "htop"
+brew "reattach-to-user-namespace"
+
+brew "fzf"
+brew "the_platinum_searcher"
+brew "ripgrep"
+
+brew "shellcheck"
+brew "tmux"
+brew "unrar"
+brew "vim"
+brew "netcat"
+brew "watch"
+# brew "wireshark"
+
+
+cask "caffeine"
+cask "karabiner-elements"
+cask "skype"
+cask "slack"
+cask "staruml"
+cask "thingsmacsandboxhelper"
+cask "transmission"
+cask "tunnelblick"
+cask "vlc"
+cask "caskroom/versions/docker-edge"
+
+# JVM-related
+cask "java"
+brew "jenv"
+# cask "visualvm"
+cask "intellij-idea-ce"
+# brew "sbt"
+
+# web-browsers
+cask "torbrowser"
+cask "google-chrome"
+# cask "firefox"
+
+# cask "calibre"
