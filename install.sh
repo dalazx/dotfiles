@@ -28,6 +28,9 @@ ln -s ~/.dotfiles/irssi ~/.irssi
 ln -s ~/.dotfiles/Brewfile ~/Brewfile
 ln -s ~/.dotfiles/globalrc ~/.globalrc
 
+# homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 g clone --recursive git@github.com:dalazx/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
