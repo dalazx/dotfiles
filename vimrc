@@ -199,6 +199,9 @@ inoremap <C-L> <Del>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 map OM <CR>
 map! OM <CR>
+nnoremap <leader>pi :silent !isort %<CR>:redraw!<CR>
+nnoremap <leader>pf :silent !black %<CR>:redraw!<CR>
+nnoremap <leader>pp :silent !black %<CR>:silent !isort %<CR>:redraw!<CR>
 
 cabbr <expr> %% expand("%:h")
 
