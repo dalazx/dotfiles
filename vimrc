@@ -205,22 +205,26 @@ nnoremap <leader>pp :silent !black %<CR>:silent !isort %<CR>:redraw!<CR>
 
 cabbr <expr> %% expand("%:h")
 
+set grepprg=rg\ --vimgrep\ --smart-case\ --no-ignore\ -g\ '!tags'\ -g\ '!cscope*'
+nnoremap <leader>g :G<CR>
+command! -nargs=0 G execute 'silent grep! '.input('grep: ') | copen | redraw!
+
 " Unite
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>b :<C-u>Unite -buffer-name=buffers buffer<CR>
 nnoremap <leader>r :<C-u>Unite -buffer-name=registers register<CR>
 nnoremap <leader>f :<C-u>Unite -buffer-name=files file_rec/async<CR>
 nnoremap <leader>m :<C-u>Unite -buffer-name=mru file_mru<CR>
-nnoremap <leader>g :<C-u>Unite -buffer-name=grep grep:.<CR>
+" nnoremap <leader>g :<C-u>Unite -buffer-name=grep grep:.<CR>
 nnoremap <leader>uc :<C-u>UniteResume<CR>
-if executable('pt')
-  let g:unite_source_grep_command = 'pt'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
-  let g:unite_source_grep_recursive_opt = ''
-  let g:unite_source_grep_encoding = 'utf-8'
-  let g:unite_source_rec_async_command =
-    \ ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
-endif
+" if executable('pt')
+"   let g:unite_source_grep_command = 'pt'
+"   let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+"   let g:unite_source_grep_recursive_opt = ''
+"   let g:unite_source_grep_encoding = 'utf-8'
+"   let g:unite_source_rec_async_command =
+"     \ ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
+" endif
 
 call unite#custom#source(
     \ 'file_mru', 'matchers',
