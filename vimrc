@@ -20,7 +20,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/neomru.vim'
-Plugin 'Shougo/vimfiler.vim'
+" Plugin 'Shougo/vimfiler.vim'
 " Bundle 'scrooloose/nerdtree'
 " Bundle 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
@@ -192,11 +192,11 @@ set spell spelllang=en_us
 set dictionary=/usr/share/dict/words
 
 " map <F2> :NERDTreeToggle<CR>
-map <F2> :VimFilerExplorer<CR>
+" map <F2> :VimFilerExplorer<CR>
 map <F3> :TagbarToggle<CR>
 map Y y$
 inoremap <C-L> <Del>
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
+" nnoremap <leader>jd :YcmCompleter GoTo<CR>
 map OM <CR>
 map! OM <CR>
 nnoremap <leader>pi :silent !isort %<CR>:redraw!<CR>
@@ -233,7 +233,7 @@ call unite#custom#source(
 set autoread
 
 let NERDTreeIgnore=['\.py[co]$']
-let g:vimfiler_ignore_filters = ['matcher_ignore_wildignore']
+" let g:vimfiler_ignore_filters = ['matcher_ignore_wildignore']
 
 " copy the current filename to the system clipboard
 nnoremap <leader>yf :<C-u>let @* = expand('%')<CR>
