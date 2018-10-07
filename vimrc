@@ -201,7 +201,7 @@ map OM <CR>
 map! OM <CR>
 nnoremap <leader>pi :silent !isort %<CR>:redraw!<CR>
 nnoremap <leader>pf :silent !black %<CR>:redraw!<CR>
-nnoremap <leader>pp :silent !black %<CR>:silent !isort %<CR>:redraw!<CR>
+nnoremap <leader>pp :silent !isort %<CR>:silent !black %<CR>:redraw!<CR>
 
 cabbr <expr> %% expand("%:h")
 
