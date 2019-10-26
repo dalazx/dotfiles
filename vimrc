@@ -17,9 +17,9 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
 " Plugin 'tpope/vim-repeat'
 
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/neomru.vim'
+" Plugin 'Shougo/vimproc.vim'
+" Plugin 'Shougo/unite.vim'
+" Plugin 'Shougo/neomru.vim'
 " Plugin 'Shougo/vimfiler.vim'
 " Bundle 'scrooloose/nerdtree'
 " Bundle 'kien/ctrlp.vim'
@@ -56,7 +56,8 @@ Bundle 'nanotech/jellybeans.vim'
 " Plugin 'Glench/Vim-Jinja2-Syntax'
 
 " Bundle 'davidhalter/jedi-vim'
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 " Bundle 'Valloric/YouCompleteMe'
 " Plugin 'sjl/gundo.vim'
 Plugin 'Chiel92/vim-autoformat'
@@ -147,10 +148,12 @@ let g:syntastic_check_on_wq = 0
 
 " flake8 includes pyflakes, pycodestyle and mccabe
 " python3 -m pip install --user flake8 pydocstyle mypy-lang pylint
-let g:syntastic_python_checkers = [
-    \ 'flake8', 'pydocstyle', 'python', 'mypy', 'pylint']
+" let g:syntastic_python_checkers = [
+"     \ 'flake8', 'pydocstyle', 'python', 'mypy', 'pylint']
+" 
+" let g:syntastic_shell_checkers = ['shellcheck', 'sh']
 
-let g:syntastic_shell_checkers = ['shellcheck', 'sh']
+" let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
 " vim-javascript-syntax
 au FileType javascript call JavaScriptFold()
@@ -210,29 +213,29 @@ nnoremap <leader>g :G<CR>
 command! -nargs=0 G execute 'silent grep! '.input('grep: ') | copen | redraw!
 
 " Unite
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>b :<C-u>Unite -buffer-name=buffers buffer<CR>
-nnoremap <leader>r :<C-u>Unite -buffer-name=registers register<CR>
-nnoremap <leader>f :<C-u>Unite -buffer-name=files file_rec/async<CR>
-nnoremap <leader>m :<C-u>Unite -buffer-name=mru file_mru<CR>
-" nnoremap <leader>g :<C-u>Unite -buffer-name=grep grep:.<CR>
-nnoremap <leader>uc :<C-u>UniteResume<CR>
-" if executable('pt')
-"   let g:unite_source_grep_command = 'pt'
-"   let g:unite_source_grep_default_opts = '--nogroup --nocolor'
-"   let g:unite_source_grep_recursive_opt = ''
-"   let g:unite_source_grep_encoding = 'utf-8'
-"   let g:unite_source_rec_async_command =
-"     \ ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
-" endif
-
-call unite#custom#source(
-    \ 'file_mru', 'matchers',
-    \ ['matcher_project_files', 'matcher_fuzzy'])
+" call unite#filters#matcher_default#use(['matcher_fuzzy'])
+" nnoremap <leader>b :<C-u>Unite -buffer-name=buffers buffer<CR>
+" nnoremap <leader>r :<C-u>Unite -buffer-name=registers register<CR>
+" nnoremap <leader>f :<C-u>Unite -buffer-name=files file_rec/async<CR>
+" nnoremap <leader>m :<C-u>Unite -buffer-name=mru file_mru<CR>
+" " nnoremap <leader>g :<C-u>Unite -buffer-name=grep grep:.<CR>
+" nnoremap <leader>uc :<C-u>UniteResume<CR>
+" " if executable('pt')
+" "   let g:unite_source_grep_command = 'pt'
+" "   let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+" "   let g:unite_source_grep_recursive_opt = ''
+" "   let g:unite_source_grep_encoding = 'utf-8'
+" "   let g:unite_source_rec_async_command =
+" "     \ ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
+" " endif
+" 
+" call unite#custom#source(
+"     \ 'file_mru', 'matchers',
+"     \ ['matcher_project_files', 'matcher_fuzzy'])
 
 set autoread
 
-let NERDTreeIgnore=['\.py[co]$']
+" let NERDTreeIgnore=['\.py[co]$']
 " let g:vimfiler_ignore_filters = ['matcher_ignore_wildignore']
 
 " copy the current filename to the system clipboard
@@ -246,7 +249,7 @@ endfunction
 
 function s:build_tags()
     echom system('find . -name \*.py > cscope.files')
-    echom system('find /usr/local/Cellar/python3 -name \*.py >> cscope.files')
+    echom system('find /usr/local/Cellar/python -name \*.py >> cscope.files')
     echom system('find . -name \*.sh >> cscope.files')
     " see https://leonard.io/blog/2013/04/editing-scala-with-vim/
     echom system('find . -name \*.scala >> cscope.files')
