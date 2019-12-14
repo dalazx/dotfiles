@@ -57,10 +57,10 @@ Bundle 'nanotech/jellybeans.vim'
 
 " Bundle 'davidhalter/jedi-vim'
 " Bundle 'scrooloose/syntastic'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 " Bundle 'Valloric/YouCompleteMe'
 " Plugin 'sjl/gundo.vim'
-Plugin 'Chiel92/vim-autoformat'
+" Plugin 'Chiel92/vim-autoformat'
 
 filetype plugin indent on " required!
 
@@ -156,7 +156,12 @@ let g:syntastic_check_on_wq = 0
 " let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
 " vim-javascript-syntax
-au FileType javascript call JavaScriptFold()
+" au FileType javascript call JavaScriptFold()
+
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace']
+\}
 
 " tagbar
 let g:tagbar_autofocus = 1
@@ -254,6 +259,7 @@ function s:build_tags()
     " see https://leonard.io/blog/2013/04/editing-scala-with-vim/
     echom system('find . -name \*.scala >> cscope.files')
     echom system('find . -name \*.java >> cscope.files')
+    echom system('find . -name \*.go >> cscope.files')
     echom system('ctags -R -L cscope.files')
     echom system('cscope -Rb -i cscope.files')
     cscope reset

@@ -3,3 +3,5 @@
 " setlocal foldtext=python_folding#text()
 
 let g:pyindent_open_paren = '&shiftwidth'
+
+let b:ale_fixers = ['isort', 'black']
