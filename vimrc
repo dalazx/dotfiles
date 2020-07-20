@@ -8,23 +8,15 @@ set encoding=utf-8
 
 filetype off " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 Bundle 'gmarik/vundle'
 
 Plugin 'tpope/vim-sensible'
 
 Plugin 'tpope/vim-unimpaired'
-" Plugin 'tpope/vim-repeat'
-
-" Plugin 'Shougo/vimproc.vim'
-" Plugin 'Shougo/unite.vim'
-" Plugin 'Shougo/neomru.vim'
-" Plugin 'Shougo/vimfiler.vim'
-" Bundle 'scrooloose/nerdtree'
-" Bundle 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
-" Plugin 'vim-scripts/ZoomWin'
 
 " git
 Bundle 'tpope/vim-fugitive'
@@ -42,27 +34,10 @@ Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'nanotech/jellybeans.vim'
 
-" python
-" Bundle 'klen/python-mode'
-" set rtp+=~/.vim/bundle/python-folding/
-" Bundle 'alfredodeza/coveragepy.vim'
-
-" Bundle 'hdima/python-syntax'
-" Bundle 'tmhedberg/SimpylFold'
-" Bundle 'vim-scripts/jpythonfold.vim'
-
-" jinja 2
-" Plugin 'mitsuhiko/vim-jinja'
-" Plugin 'Glench/Vim-Jinja2-Syntax'
-
-" Bundle 'davidhalter/jedi-vim'
-" Bundle 'scrooloose/syntastic'
 Plugin 'dense-analysis/ale'
-" Bundle 'Valloric/YouCompleteMe'
-" Plugin 'sjl/gundo.vim'
-" Plugin 'Chiel92/vim-autoformat'
 
-filetype plugin indent on " required!
+call vundle#end()         " required
+filetype plugin indent on " required
 
 " preliminarily running sensible.vim to be able to override later
 runtime! plugin/sensible.vim
@@ -150,7 +125,7 @@ let g:syntastic_check_on_wq = 0
 " python3 -m pip install --user flake8 pydocstyle mypy-lang pylint
 " let g:syntastic_python_checkers = [
 "     \ 'flake8', 'pydocstyle', 'python', 'mypy', 'pylint']
-" 
+"
 " let g:syntastic_shell_checkers = ['shellcheck', 'sh']
 
 " let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
@@ -233,7 +208,7 @@ command! -nargs=0 G execute 'silent grep! '.input('grep: ') | copen | redraw!
 " "   let g:unite_source_rec_async_command =
 " "     \ ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 " " endif
-" 
+"
 " call unite#custom#source(
 "     \ 'file_mru', 'matchers',
 "     \ ['matcher_project_files', 'matcher_fuzzy'])
