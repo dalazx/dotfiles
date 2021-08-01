@@ -11,7 +11,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-sensible'
 
