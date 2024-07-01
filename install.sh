@@ -14,15 +14,15 @@ sudo apt-get install pkg-config
 
 # ln -s ~/Dropbox/.ssh ~/.ssh
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Misc/ssh ~/.ssh
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+ln -s ~/github.com/dalazx/gitconfig ~/.gitconfig
 
 mv ~/.bashrc ~/.bashrc_backup
-ln -s ~/.dotfiles/bashrc ~/.bashrc
-ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/tmux ~/.tmux
+ln -s ~/github.com/dalazx/bashrc ~/.bashrc
+ln -s ~/github.com/dalazx/tmux.conf ~/.tmux.conf
+ln -s ~/github.com/dalazx/tmux ~/.tmux
 
-ln -s ~/.dotfiles/vim ~/.vim
-ln -s ~/.dotfiles/vimrc ~/.vimrc
+ln -s ~/github.com/dalazx/vim ~/.vim
+ln -s ~/github.com/dalazx/vimrc ~/.vimrc
 
 ln -s ~/.dotfiles/irssi ~/.irssi
 

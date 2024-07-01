@@ -35,6 +35,8 @@ Bundle 'edkolev/tmuxline.vim'
 Bundle 'nanotech/jellybeans.vim'
 
 Plugin 'dense-analysis/ale'
+Plugin 'github/copilot.vim'
+Plugin 'tpope/vim-vinegar'
 
 call vundle#end()         " required
 filetype plugin indent on " required
@@ -54,7 +56,7 @@ syntax on
 
 set backspace=indent,eol,start
 
-set textwidth=78
+set textwidth=88
 set nocursorline
 set colorcolumn=+1
 " let &colorcolumn=join(range(&textwidth+1,256), ",")
@@ -274,3 +276,9 @@ elseif executable("cscope")
       cscope add $CSCOPE_DB
   endif
 endif
+
+inoremap <Esc>[ <Plug>(copilot-previous)
+inoremap <Esc>] <Plug>(copilot-next)
+inoremap <Esc>\ <Plug>(copilot-suggest)
+
+let g:copilot_node_command = "~/.nodenv/versions/20.11.1/bin/node"
