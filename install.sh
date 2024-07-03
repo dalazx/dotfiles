@@ -1,28 +1,15 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get dist-upgrade
-# GUI
-# google-chrome
-# skype
-sudo apt-get install thunderbird
-sudo apt-get install nautilus-dropbox
-
-sudo apt-get install git-core
-sudo apt-get install subversion
-sudo apt-get install build-essential cmake python-dev
-sudo apt-get install pkg-config
-
-# ln -s ~/Dropbox/.ssh ~/.ssh
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Misc/ssh ~/.ssh
-ln -s ~/github.com/dalazx/gitconfig ~/.gitconfig
+ln -s ~/github.com/dalazx/dotfiles/gitconfig ~/.gitconfig
 
 mv ~/.bashrc ~/.bashrc_backup
-ln -s ~/github.com/dalazx/bashrc ~/.bashrc
-ln -s ~/github.com/dalazx/tmux.conf ~/.tmux.conf
-ln -s ~/github.com/dalazx/tmux ~/.tmux
+ln -s ~/github.com/dalazx/dotfiles/bashrc ~/.bashrc
+ln -s ~/github.com/dalazx/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/github.com/dalazx/dotfiles/tmux ~/.tmux
 
-ln -s ~/github.com/dalazx/vim ~/.vim
-ln -s ~/github.com/dalazx/vimrc ~/.vimrc
+ln -s ~/github.com/dalazx/dotfiles/vim ~/.vim
+ln -s ~/github.com/dalazx/dotfiles/vimrc ~/.vimrc
 
 ln -s ~/.dotfiles/irssi ~/.irssi
 
@@ -35,24 +22,3 @@ ln -s ~/.dotfiles/globalrc ~/.globalrc
 g clone --recursive git@github.com:dalazx/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-sudo apt-get install python-setuptools
-sudo easy_install pip
-sudo pip install -U distribute pip
-sudo pip install virtualenv
-
-pip install pyprof2calltree
-
-sudo apt-get install vim-gtk
-
-sudo pip install pylama
-
-sudo apt-get install virtualbox
-# vagrant
-sudo apt-get install libmysqlclient-dev
-
-mkdir ~/dev
-
-sudo apt-get install -y s3cmd
-sudo apt-get install -y htop
-sudo apt-get install -y meld
