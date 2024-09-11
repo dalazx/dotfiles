@@ -280,5 +280,7 @@ endif
 inoremap <Esc>[ <Plug>(copilot-previous)
 inoremap <Esc>] <Plug>(copilot-next)
 inoremap <Esc>\ <Plug>(copilot-suggest)
+inoremap <Esc><Tab> <Plug>(copilot-accept-word)
+inoremap <Esc><S-Tab> <Plug>(copilot-accept-line)
 
 let g:copilot_node_command = "~/.nodenv/versions/20.11.1/bin/node"
