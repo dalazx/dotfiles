@@ -21,4 +21,4 @@ ln -s ~/.dotfiles/globalrc ~/.globalrc
 
 g clone --recursive git@github.com:dalazx/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/Vundle.vim
